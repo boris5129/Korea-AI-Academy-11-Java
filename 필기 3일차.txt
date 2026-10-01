@@ -1,0 +1,30 @@
+git
+다른 작업결과 합치는 기능도 있음
+
+workspace - 작업공간  workingtree?
+-add git
+Staging - 작업 선택(장바구니 개념)
+-git commit
+local repository - 컴퓨터에 저장 = history
+-git push
+Remote repository - 원격 저장(git hub)  
+
+add = 추가하겠다.(workspace 에서 staging 으로 올라감
+add . = "."은 현재 폴더를 의미 add . 이면 폴더에 있는 모든걸 올린다.
+tap key = 들어있는 파일이름 자동완성 (파일이 1개만 있으면 바로, 두개이상일 경우 tap 2번 그럼 파일이름 다뜸
+- key = 옵션추가
+commit - staging에 있는걸 commit 하겠다
+git log = log 확인
+git init = git 폴더로 지정
+
+sourcetree다운(by window) - git 명령어 안치고 gui로 보는거
+건너뛰기 체크풀고 설치 후 아니오
+
+별도의 프로그램이라 추가해서 만들어줌
+클론 - github에서 가져오는거
+추가 - sourcetree 에 불러오겠다(이미있는거)
+생성 - 만들겠다
+
+추가 - todo
+
+원격 해서 저장소 연결해야 push 가능
