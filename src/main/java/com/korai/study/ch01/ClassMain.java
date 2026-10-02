@@ -30,7 +30,7 @@ public class ClassMain {
 
         System.out.println("33" + 33);
 
-        class Student3<A>{ //<> 자료형자체를 변수화
+        class Student3<A>{ //<> 자료형자체를 변수화 제네릭
             String name;
             A age;
         }
