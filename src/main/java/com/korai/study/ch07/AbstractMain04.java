@@ -16,8 +16,7 @@ public class               AbstractMain04 {
         // 오버로딩은 같은거 쓰는거 오버라이드 는 덮어쓴다.
         List<Animal2> animals = new ArrayList<>(); // animal2 담을수있다            정확한 배열은 아니라 lauth 대신 size
         animals.add(new Dog2());  //자동 업캐스팅
-        animals.add(new Tiger2()); // 추상화시켜서 애니멀로 묶어서 관리
-
+        animals.add(new Tiger2()); // 추상화시켜서 애니멀로 묶어서 관리 업캐스팅 하나의 자료형으로 묶는다
         Dog3 animal1ToDog = (Dog3) animal1; //Dog3 로 다운캐스팅해라 애니멀 자료니깐 앞에 괄호
         animal1ToDog.bark(); // 위에서 다운캐스팅 했으니깐 사용가능
         ((Dog3) animal1).bark();   // animal.bark(); 는 안됨 강제 다운캐스팅
@@ -31,6 +30,7 @@ public class               AbstractMain04 {
     }
 }
 // 각 다른 움직임을( 걷고 뛰고) 움직인다 라는 공통적인걸로 한번에 하려고 업 다운 캐스팅 씀
+//업캐스팅이면되면 자신만 가지고 있는 메서드를 호출할수 없게 된다. 오버라이딩 해야한다 or 다운캐스팅하거나
 //instanceof ==> 생성된 객체 맞는지 묻는  ex>  instanceof x -> x의 객체가 맞니? t/F
 
 class Animal4 {

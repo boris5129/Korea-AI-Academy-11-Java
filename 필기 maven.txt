@@ -1,0 +1,16 @@
+MAVEN Repository
+lombok
+Project Lombok » 1.18.48
+maven 을 클릭하면 카피
+pom.xml
+</dependencies>
+사이에 붙여넣기
+오른쪽 상단에 메이븐 업데이트 설치하면 빨간색 사라짐 (외부 라이브러리에 프로젝특롬북 있는지 확인
+
+쓸 클래스가서
+@AllArgsConstructor  모든인자가 있는 생성자
+@Data			getter, setter, equals, toString, hashcode 이거 자동으로 만들어줌
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+생김
