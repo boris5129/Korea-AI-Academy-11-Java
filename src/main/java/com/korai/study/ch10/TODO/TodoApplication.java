@@ -16,7 +16,7 @@ public class TodoApplication {
         RootRouter.setUp();     //1. RootRouter.setUp() 을 실행
 
         while(true) {
-            RootRouter.getCurrentView().show();
+            RootRouter.getCurrentView().show();//show를 각 view에서 반복한다
         }
     }
 }
