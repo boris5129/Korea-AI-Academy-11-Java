@@ -1,0 +1,20 @@
+1. 검색 - 자격증명관리자 - windows 자격증명 - git 관련 (git:http://github.com) - 제거
+git 관련
+1. 자격증명관리자에서 로그인정보 삭제
+
+2. git bash - git config 사용자 정보삭제
+ git config --global --unset user.name //이름삭제
+ git config --global --unset user.email //이메일삭제
+ git config --global --list // 확인
+
+3. intelliJ 
+1. 메뉴 도움말 구독관리 - 왼쪽하단 프로필 로그아웃
+
+4.
+카톡 디코 크롬 로그아웃
+설정 개인정보및 보안 -인터넷사용기록삭제
+
+-설정 계정 다른사용자 이사람의로그인정보가지고있지 않습니다.
+계정설정 Win + R - netplwiz
+
+인텔리제이 설정 플러그인 마켓플레이스 atonm Material icons
