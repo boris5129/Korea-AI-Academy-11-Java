@@ -23,8 +23,13 @@ class 티켓 {
     int 좌석번호;
     String 영화제목;
     int 가격;
+    final int 총좌석 = 10;
 
     티켓(int 좌석번호, String 영화제목, int 가격) {
+        System.out.println("티켓 생성자 호출");
+        this.좌석번호 = 좌석번호;
+        this.영화제목 = 영화제목;
+        this.가격 = 가격;
         // TODO: "티켓 생성자 호출" 출력 후, this 를 사용해 세 필드에 값을 저장하세요.
     }
 }
@@ -33,15 +38,28 @@ class 영화관 {
     static int 좌석번호 = 1;
     static int 남은좌석 = 3;
     static int 총매출;
-
+    static {
+        System.out.println("영화관 오픈");
+    }
     // TODO: static 블록에서 "영화관 오픈" 을 출력하세요.
 
     static int 가격계산(int 나이) {
+        if(나이 < 20){
+             return  8000;
+        } else { return 12000;}
         // TODO: 20세 미만 8000, 그 외 12000
-        return 0;
     }
 
     static 티켓 예매(String 영화제목, int 나이) {
+        if(남은좌석 == 0){
+            System.out.println("<" + 영화제목 + ">" + "매진");
+            return null;
+        }
+        if (남은좌석 > 0){
+            남은좌석--;
+            총매출 = 총매출 + 영화관.가격계산(나이);
+            좌석번호++;
+        }
         // TODO 1: 남은좌석이 0이면 "<영화제목> 매진" 출력 후 null 반환
         // TODO 2: 남은좌석 1 감소, 총매출에 가격 추가
         // TODO 3: 좌석번호를 1씩 증가시키며 새 티켓을 만들어 반환

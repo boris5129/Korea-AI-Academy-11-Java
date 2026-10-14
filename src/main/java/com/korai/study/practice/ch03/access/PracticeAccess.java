@@ -35,21 +35,35 @@ class 안전계좌 {
 
     // TODO: getOwner(), getBalance() Getter 를 만드세요.
     String getOwner() {
-        return null;
+
+        return 예금주;
     }
 
     int getBalance() {
-        return 0;
+        if (잔액 < 0){
+        //    return null;
+        }
+        return 잔액;
     }
 
     boolean 입금(int 금액) {
+        if(금액 <= 0){
+            System.out.println("입금 실패: 잘못된 금액");
+            return false;
+        }
+        잔액 = 잔액 + 금액;
         // TODO: 0 이하이면 "입금 실패: 잘못된 금액" 출력 후 false
-        return false;
+        return true;
     }
 
     boolean 출금(int 금액) {
+        if (금액 > 잔액){
+            System.out.println("출금 실패: 잔액 부족");
+            return false;
+        }
+        잔액 = 잔액 - 금액;
         // TODO: 잔액보다 많으면 "출금 실패: 잔액 부족" 출력 후 false
-        return false;
+        return true;
     }
 }
 
@@ -57,11 +71,17 @@ class 점수 {
     private int score;
 
     void setScore(int score) {
+        if (!(score >= 0 && score <= 100)){
+            score = score;
+        }else {
+            System.out.println("잘못된 점수");
+            return; //값줘야함
+        }
         // TODO: 0~100 이 아니면 "잘못된 점수" 출력 후 값을 바꾸지 않기
     }
 
     int getScore() {
         // TODO
-        return 0;
+        return score;
     }
 }
