@@ -6,8 +6,9 @@ package com.korai.study.ch12;
  * 데이터의 중복을 허용하지 않아야 한다.
  * 1. 배열 (크기(index)고정 - list와 다른점, 구조는같다(Arraylist)
  * 2. 리스트 - ArrayList(크기 자유 - 배열과 다른점), LinkedList (구조다름) - 데이터 중복가능 순서가 있음
- * 3. 세트 - HashSet - 순서X (비유 주머니에 구슬 - 중복 제거용)
+ * 3. 세트 - HashSet - 순서X (비유 주머니에 구슬 - 중복 제거용) 중복X
  * 4. 맵 - HashMap - 순서X (중복 허용 - key값을 붙여 허용(원하는 keyword로 허용)), key 와 value가 동일한 값은 허용X)
+ *                          //key는 중복X value는 허용
  */
 
 import java.util.ArrayList;
