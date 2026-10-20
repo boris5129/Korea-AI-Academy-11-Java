@@ -8,31 +8,19 @@ public class ArrayListTest04 {
         List listA = List.of(5 ,2, 8);
         List listB = List.of(3 ,9, 1);
         List<Integer> list = new ArrayList<>(); // 3 9 1 5 2 8
-        List<Integer> list2 = new ArrayList<>();
         list.addAll(listB);
         list.addAll(listA);
 
-        for(int i = 0; i < list.size(); i++){
-            for(int j = i + 1; j < list.size(); j++){
-                if(list.get(i)>list.get(j)){
-                    list.set(i, j);
+        for (int i = 0 ; i < list.size()-1; i++){       // 비교횟수 01 12 23 34 만하면됨 마지막x
+            for (int j = 0; j < list.size() -i -1;j++){ // 반복횟수가 바퀴마다 1개씩 확정나니 -i만큼 적게
+                int temp = list.get(j);                 // 빈컵에 담고
+                if(list.get(j) > list.get(j+1)){        // 앞에가 뒤보다 크면
+                    list.set(j, list.get(j+1));         // j 자리에 j 다음데이터
+                    list.set(j+1, temp);                // j+1 자리에 j 데이터
                 }
             }
-        }
+        }System.out.println(list);
 
-        System.out.println(list);
-//        for (int i = 0; i < list.size(); i++){
-//            int a = list.get(i);        // 3 9 1 5 2 8
-//            for (int j = i + 1; j < list.size(); j++){
-//                int b = list.get(j);    // 9 1 5 2 8
-//                    if(a - b > 0){//a가커
-//                        list2.add(b);
-//                    }else if(a - b < 0){
-//                        list2.add(b);
-//                    }
-//            }
-//        }System.out.println(list2);
+
     }
-
-
 }

@@ -8,14 +8,14 @@ public class ArrayListTset05 {
         List<String> list = new ArrayList<>();
         list.addAll(List.of("사과", "바나나", "포도", "딸기"));
 
-        for(int i = 0; i < list.size(); i++){
-            if(list.contains("포도")){
-                list.remove("포도");
-                list.add("망고");
-                list.remove("딸기");
-                list.addFirst("체리");
-            }
+        int a = list.indexOf("포도");
+        if(a != -1){
+            list.set(a, "망고");
         }
+        list.remove("딸기");
+        list.addFirst("멜론");
+
+
         System.out.println(list);
     }
 }
