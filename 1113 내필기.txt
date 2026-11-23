@@ -1,0 +1,30 @@
+IOC -  inversion of control (역전의제어) / 제어는 조립(DI)하는행위
+ /역전은 주체(원래 사용자가 스프링으로)가 바뀐다.
+IOC Container 는 객체(Bean - ioc에 의해 생성된 객체)를 넣는다
+원래 A a = new a 를 개발자가 했지만 스프링부트에서는 프로그램이 실행될때 자동으로 조립된다.
+Component IOC생성하는거  생성한 객체를 bean 담기면 IOC Container에 담겼다
+Component 가 있어야 자동조립 싱글톤으로 생성된다.
+Autowired와 allArgsConstructor 둘다 에 의해 종속이 가능
+기능은 Component해서 싱글톤을 만든다,  데이터는 뉴해서 Component 안한다.
+
+DI - Dependency(종속 주입) / 마스터(주)와 슬레이브(종) - 주종 관계 객체가서로 의존관계일때 필요할떄 준다.
+/조립행위
+프로그램에서 주 가 종에 종속(일을해야 주인이 생긴다 - 기능적 관점)
+매개변수로 전달되는 행위 자체(객체전달) - 의존성주입이다.
+고객 - Controller - Service - Mapper(Repository, DAO:Data Access Object) (3개가같은의미)
+클라이언트가 여러개일때는 스프링부트가 스레드처리 해줘야 효율적이다 (요청과 응답을 여러개로 해야한다.)
+멀티스레드서버 - 요청여러개, 응답여러개 가능 - 이걸 구한게 Tomcat 
+/ 클라이언트 여러개만큼의 controller가 필요 그래서 싱글톤을 사용하여 1개만 만들어 기능을 쓴다.
+싱글톤에서 c가 생성될떄 s가 필요, s가 생성될때 r이 필요 각각 의존성
+
+
+0. 고객 - 요청 
+
+1. Controller(부장) - (요청받고, 응답하고) Service 를 의존 
+
+2. Sevice(과장) - (요청을 정의, 기능을 호출(NEW)) add 정의, Mapper를 의존 의존성(객체를 의존)
+
+3.  Mapper(대리) - (기능 만든다)insert,findById,update 함수이자 기능
+
+thread - 약간 병렬처리 (같이 분산 일해주는거  - 순서대로 X) 1번 10초 2번 10초 3번 10초 
+운영체제에서 나눠서 처리하는게 프로세스

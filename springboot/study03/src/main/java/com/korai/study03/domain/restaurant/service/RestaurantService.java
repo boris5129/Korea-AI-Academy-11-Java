@@ -1,0 +1,22 @@
+package com.korai.study03.domain.restaurant.service;
+
+import com.korai.study03.domain.restaurant.dto.RestaurantCreateRequest;
+import com.korai.study03.domain.restaurant.dto.RestaurantResponse;
+import com.korai.study03.domain.restaurant.entity.Restaurant;
+import com.korai.study03.domain.restaurant.mapper.RestaurantMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class RestaurantService {
+    @Autowired
+    public RestaurantMapper restaurantMapper;
+
+    public RestaurantResponse create(RestaurantCreateRequest request){
+        Restaurant restaurant = request.toRestaurant();
+        restaurantMapper.insert(restaurant);
+        System.out.println(restaurant);
+        return restaurant.toRestaurantResponse();
+
+    }
+}
