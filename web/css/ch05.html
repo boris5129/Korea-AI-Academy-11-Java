@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1>input[type] {
+            color: red;
+        }
+
+        .box2>input[type="text"] {
+            color: blue;
+        }
+
+        .box3>a:link {
+            color: red;
+        }
+
+        .box3>a:visited {
+            color: pink;
+        }
+
+        .box4>.in1:hover {
+            background-color: red;
+        }
+
+        .box4>.in2:active {
+            background-color: red;
+        }
+
+        .box4>.in3:focus {
+            background-color: red;
+        }
+
+        .box4>.in4:hover {
+            background-color: green;
+        }
+
+        .box4>.in4:active {
+            background-color: blue;
+        }
+
+        .box4>.in4:focus {
+            background-color: red;
+        }
+
+        .box5>button:enabled {
+            color: purple;
+        }
+
+        .box5>button:disabled {
+            color: purple;
+        }
+
+        .box6>input[type="checkbox"]:checked {
+            display: none;
+        }
+
+        .box6>input[type="checkbox"]+label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            border: 2px solid #222;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+        }
+
+        .box6>input[type="checkbox"]:checked+label>div {
+            box-sizing: border-box;
+            border-radius: 50%;
+            width: 43px;
+            height: 43px;
+            background-color: red;
+        }
+
+        .box7>div {
+            width: 50px;
+            height: 50px;
+            background-color: gray;
+        }
+
+        .box7>div:not(.not1) {
+            background-color: blue;
+        }
+
+        .box8>button:hover+div::before {
+            content: "앞부분";
+        }
+
+        .box8>button:active+div::after {
+            content: "뒷부분";
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <input type="text">
+        <input type="password">
+        <input type="text">
+        <input type="text">
+    </div>
+
+    <div class="box2">
+        <input type="text">
+        <input type="password">
+    </div>
+
+    <div class="box3">
+        <a href="http://naver.com">네이버</a>
+        <a href="http://google.com">구글</a>
+    </div>
+
+    <DIv class="box4">
+        <input type="text" class="in1">
+        <input type="text" class="in2">
+        <input type="text" class="in3">
+        <input type="text" class="in4">
+        <div class="in4">클릭</div>
+    </DIv>
+
+    <div class="box5">
+        <button>전송</button>
+        <button disabled>전송</button>
+    </div>
+
+    <div class="box6">
+        <input type="checkbox" id="1">
+        <label for="1">
+            <div></div>
+        </label>
+        <input type="checkbox" id="2">
+        <label for="2">
+            <div></div>
+        </label>
+    </div>
+
+    <div class="box7">
+        <div></div>
+        <div class="not1"></div>
+        <div></div>
+        <div class="not1"></div>
+    </div>
+
+    <div class="box8">
+        <button>클릭</button>
+        <div>내용</div>
+    </div>
+</body>
+
+</html>

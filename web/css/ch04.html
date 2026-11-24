@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 h1 {
+            color: red;
+        }
+
+
+        .box1>p {
+            color: blue;
+        }
+
+        .box2>.box2-2+div {
+            color: green;
+        }
+
+        .box3>p~div {
+            color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">\
+        <h1>가나다</h1>
+        <p>다나다</p>
+        <h1>가나다</h1>
+        <div>
+            <div>
+                <h1>가나다</h1>
+                <p>가나다2</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="box2">
+        <div class="box2-2">1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <div class="box3">
+        <div>1</div>
+        <p>2</p>
+        <div>3</div>
+        <h1>4</h1>
+        <div>5</div>
+    </div>
+</body>
+
+</html>
