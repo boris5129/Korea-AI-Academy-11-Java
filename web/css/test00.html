@@ -39,6 +39,109 @@
             margin-bottom: 10px;
             border-radius: 50%;
         }
+
+        .card,
+        p {
+            color: blue;
+        }
+
+        .card>p {
+            font-weight: bold
+        }
+
+        .body>p {
+            background-color: lightyellow\;
+        }
+
+        .active {
+            color: red;
+        }
+
+        .active+li {
+            text-decoration: underline;
+        }
+
+        .active~li {
+            color: gray;
+        }
+
+        .join [type] {
+            border: 2px solid #333;
+        }
+
+        .join [type="password"] {
+            color: red;
+        }
+
+        .join [type="email"] {
+            background-color: aliceblue;
+        }
+
+        .link>a:link {
+            color: green;
+        }
+
+        .link>audio:visited {
+            color: gray;
+        }
+
+        .link>.a:hover {
+            color: orange;
+        }
+
+        .link>.a:active {
+            color: red;
+        }
+
+        .form>input:focus {
+            background-color: lightyellow;
+            border: 2px solid orange;
+        }
+
+        .item {
+            width: 120px;
+            height: 40px;
+            background-color: lightgray;
+        }
+
+        .products>.item:not(.soldout) {
+            background-color: lightgreen;
+        }
+
+        .buttons>button {
+            background-color: purple;
+            color: afff;
+        }
+
+        .buttons>button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        #terms {
+            display: none;
+        }
+
+        .agree>label {
+            display: block;
+            justify-content: center;
+            border: 2px solid #222;
+            border-radius: 8px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+        }
+
+        .agree>input[type="checkbox"]:checked+label>div {
+            border-radius: 4px;
+            width: 30px;
+            height: 30px;
+            background-color: royalblue;
+        }
+
+        .tip>button:hover+div::before {
+            content: "💡";
+        }
     </style>
 </head>
 
@@ -52,6 +155,75 @@
     <div class="blue"></div>
     <div id="star"></div>
     <div class="red round"></div>
+
+    <div class="card">
+        <h2>공지사항</h2>
+        <p>요약 문장입니다.</p>
+        <div class="body">
+            <p>본문 문장입니다.</p>
+            <div>
+                <p>더깊은문장입니다.</p>
+            </div>
+        </div>
+    </div>
+
+    <ul class="menu">
+        <li>홈</li>
+        <li class="active">소개</li>
+        <li>상품</li>
+        <li>게시판</li>
+        <li>문의</li>
+    </ul>
+
+    <form class="join">
+        <input type="text" placeholder="아이디">
+        <input type="password" placeholder="비밀번호">
+        <input type="email" placeholder="이메일">
+        <input placeholder="type 없음">
+    </form>
+
+    <div class="links">
+        <a href="https://naver.com">네이버</a>
+        <a href="https://daum.net">다음</a>
+    </div>
+    <div class="form">\
+        <input type="text" placeholder="이름을입력하세요">
+        <button>확인</button>
+    </div>
+
+    <div class="products">
+        <div class="item">사과</div>
+        <div class="item soldout">배</div>
+        <div class="item">포도</div>
+        <div class="item soldout">딸기</div>
+    </div>
+    <div class="buttons">
+        <button>
+            장바구니
+        </button>
+        <button disabled>
+            품절
+        </button>
+    </div>
+
+    <div class="agree">
+        <input type="checkbox" id="terms">
+        <label for="terms">
+            <div></div>
+        </label>
+        <span>이용약관에 동의합니다</span>
+    </div>
+    <div class="tip">
+        <button>
+            도움말
+        </button>
+        <div>
+            약관
+
+            안내
+        </div>
+    </div>
+
 </body>
 
 </html>
