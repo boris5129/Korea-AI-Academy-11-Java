@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .p-box{
+            display: flex;
+            align-items: stretch;
+            border: 1px solid #222;
+            box-sizing: border-box;
+            width: 600px;
+            height: 400px;
+            background-color: #eee;
+        }
+
+        .box{
+            border: 1px solid #222;
+            box-sizing: border-box;
+            width: 60px;
+            /* height: 60px; */
+            background-color: white;
+        }
+
+        .c-box1{
+            flex-grow: 2;
+        }
+        .c-box2{
+            flex-grow: 1;
+        }
+        .c-box3{
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="p-box">
+        <div class="box c-box1"></div>
+        <div class="box c-box2"></div>
+        <div class="box c-box3"></div>
+    </div>
+</body>
+</html>

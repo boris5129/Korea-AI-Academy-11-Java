@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+        }
+
+        .box1 {
+            transition-property: transform;
+            transition-duration: 0.4s;
+            transition-timing-function: ease-in-out;
+            background-color: red;
+        }
+
+        .box1:hover {
+            transform: scale(160%);
+        }
+
+        .box2 {
+            transition: transform 0.5s ease-in-out;
+            background-color: blue;
+        }
+
+        .box2:hover {
+            transform: rotate(160deg);
+        }
+
+        .box3 {
+            background-color: brown;
+        }
+
+        @keyframes box3-ani {
+            0% {
+                border-radius: 0;
+            }
+
+            50%{
+                border-radius: 50%;
+                transform: translate(50%, 50%);
+            }
+
+            100% {
+                border-radius: 50%;
+            }
+
+        }
+
+        .box3-button:active+.box3 {
+            animation-name: box3-ani;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <button class="box3-button">클릭</button>
+    <div class="box3"></div>
+</body>
+
+</html>

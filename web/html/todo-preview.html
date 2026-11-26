@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            color-scheme: light;
+            font-family: "Pretendard", "Malgun Gothic", "Segoe UI", sans-serif;
+            color: #182641;
+            background: #edf2fa;
+            --accent: #2854d8;
+            --focus: #5274ef;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+            min-height: 100dvh;
+            margin: 0;
+            padding: clamp(12px, 4vw, 32px);
+            background:
+                radial-gradient(ellipse at 50% 0%, #fafcff, transparent 70%),
+                #edf2fa;
+        }
+
+        body > div {
+            display: grid;
+            gap: 12px;
+            width: min(100%, 440px);
+            padding: clamp(16px, 5vw, 28px);
+            border: 1px solid #dce4f1;
+            border-radius: 26px;
+            background: #fff;
+            box-shadow: 0 24px 64px #203c7024, 0 4px 12px #203c700d;
+        }
+
+        body > div > div:first-child {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            gap: 8px;
+        }
+
+        input, button {
+            font: inherit;
+        }
+
+        input[type="text"] {
+            min-width: 0;
+            width: 100%;
+            padding: 8px 11px;
+            border: 1px solid #d3deef;
+            border-radius: 8px;
+            background: #fff;
+            color: inherit;
+        }
+
+        body > div > div:first-child > input {
+            min-height: 44px;
+            border-radius: 11px;
+            background: #f7f9fd;
+        }
+
+        button {
+            min-height: 34px;
+            padding: 0 12px;
+            border: 1px solid transparent;
+            border-radius: 8px;
+            font-size: 0.8125rem;
+            font-weight: 700;
+            white-space: nowrap;
+            cursor: pointer;
+            transition: background-color 150ms ease, border-color 150ms ease;
+        }
+
+        body > div > div:first-child > button {
+            border-color: #dce4f1;
+            border-radius: 11px;
+            background: #f0f4fa;
+            color: #3d5275;
+        }
+
+        body > div > div:first-child > button:hover {
+            background: #e4ebf7;
+        }
+
+        body > div > button {
+            min-height: 44px;
+            border-radius: 11px;
+            background: var(--accent);
+            color: #fff;
+            font-size: 0.875rem;
+        }
+
+        body > div > button:hover {
+            background: #1f44b8;
+        }
+
+        body > div > div:last-child {
+            display: grid;
+            gap: 8px;
+            max-height: clamp(160px, 60dvh, 560px);
+            overflow-y: auto;
+            margin-top: 6px;
+            padding: 10px;
+            border: 1px solid #e4eaf4;
+            border-radius: 16px;
+            background: #f4f7fc;
+        }
+
+        body > div > div:last-child > div {
+            display: grid;
+            grid-template-columns: auto minmax(0, 1fr) auto;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 8px;
+            border: 1px solid #e0e7f2;
+            border-radius: 11px;
+            background: #fff;
+        }
+
+        input[type="checkbox"] {
+            width: 17px;
+            height: 17px;
+            margin: 0 2px;
+            accent-color: var(--accent);
+            cursor: pointer;
+        }
+
+        input[type="checkbox"]:checked + input[type="text"] {
+            background: #eef2f8;
+            color: #53647e;
+            text-decoration: line-through;
+        }
+
+        body > div > div:last-child button {
+            background: #fff0f2;
+            color: #a62243;
+        }
+
+        body > div > div:last-child button:hover {
+            background: #ffe0e7;
+        }
+
+        input:focus-visible, button:focus-visible {
+            outline: 2px solid var(--focus);
+            outline-offset: 2px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            button {
+                transition: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div>
+            <input type="text">
+            <button type="button" id="resetButton">초기화</button>
+        </div>
+        <button>추가버튼</button>
+        <div>
+            <div>
+                <input type="checkbox">
+                <input type="text">
+                <button>삭제</button>
+            </div>
+            <div>
+                <input type="checkbox">
+                <input type="text">
+                <button>삭제</button>
+            </div>
+            <div>
+                <input type="checkbox">
+                <input type="text">
+                <button>삭제</button>
+            </div>
+            <div>
+                <input type="checkbox">
+                <input type="text">
+                <button>삭제</button>
+            </div>
+            <div>
+                <input type="checkbox">
+                <input type="text">
+                <button>삭제</button>
+            </div>
+            <div>
+                <input type="checkbox">
+                <input type="text">
+                <button>삭제</button>
+            </div>
+            <div>
+                <input type="checkbox">
+                <input type="text">
+                <button>삭제</button>
+            </div>
+            <div>
+                <input type="checkbox">
+                <input type="text">
+                <button>삭제</button>
+            </div>
+            <div>
+                <input type="checkbox">
+                <input type="text">
+                <button>삭제</button>
+            </div>
+            <div>
+                <input type="checkbox">
+                <input type="text">
+                <button>삭제</button>
+            </div>
+
+        </div>
+    </div>
+    <script>
+    const resetButton = document.querySelector("#resetButton");
+
+    resetButton.addEventListener("click", (event) => {
+        const isMouseOnLeft = event.clientX < window.innerWidth / 2;
+        const isMouseOnTop = event.clientY < window.innerHeight / 2;
+
+        resetButton.style.position = "fixed";
+        resetButton.style.left = isMouseOnLeft ? "auto" : "16px";
+        resetButton.style.right = isMouseOnLeft ? "16px" : "auto";
+        resetButton.style.top = isMouseOnTop ? "auto" : "16px";
+        resetButton.style.bottom = isMouseOnTop ? "16px" : "auto";
+        resetButton.style.zIndex = "1";
+    });
+</script>
+</body>
+
+</html>
