@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" class="search">
+    <button onclick="handleSearchOnClick()">검색</button>
+
+    <h1>김준일</h1>
+    <h1>김준이</h1>
+    <h1>김준삼</h1>
+
+    <script>
+        function handleSearchOnClick() {
+            const search = document.querySelector('.search');
+            console.log(search.value)
+
+            const h1Elements = document.querySelectorAll("h1");
+            for (let i = 0; i < h1Elements.length; i++) {
+                if (h1Elements[i].innerText === search.value) {
+                    h1Elements[i].innerText += "(+--)";
+                } else {
+                    h1Elements[i].innerText = h1Elements[i].innerText.replace("(+--)", "");
+
+                }
+            }
+
+        }
+    </script>
+</body>
+
+</html>

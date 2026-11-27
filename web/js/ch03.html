@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>hello javascript</h1>
+    <h1>hello java</h1>
+    <p class="username"></p>
+
+    <script>
+        const h1Elements = document.getElementsByTagName("h1");
+        console.log(h1Elemens[0]);
+        h1Elements[0].innerText = "hello javascript!"
+
+        const h1Elements2 = document.querySelectorAll("h1");
+        console.log(h1Elements2);
+
+        const usernameElement1 = document.getElementsByClassName("username");
+        const usernameElement2 = document.querySelectorAll(".username");
+        const usernameElement3 = document.querySelector(".username");
+        usernameElement3.innerText = 'test1234';
+    </script>
+</body>
+
+</html>
